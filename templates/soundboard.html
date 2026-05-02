@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<link href="/static/css/buttons.css" type="text/css" rel="stylesheet">
+<style>
+    html {
+        background: rgb(115, 0, 255);
+        font-family: jetbrains-mono, 'Courier New', monospace;
+    }
+
+    h1 {
+        color: aliceblue;
+    }
+
+</style>
+<html>
+    <head>
+        <title>Funny Soundboard</title>
+    </head>
+    <header>
+        <h1>Funny Soundboard</h1>
+    </header>
+    <body>
+        <button onclick="play_sound('FALCONIAN')" style="width: 150px; height: 50px" class="button">FALCONIAN</button>
+        <button onclick="play_sound('weirdroute')" style="width: 150px; height: 50px" class="button">Weird Route</button>
+        <button onclick="play_sound('metalpipe')" style="width: 150px; height: 50px" class="button">Metal Pipe</button>
+        <button onclick="play_sound('gunshot')" style="width: 150px; height: 50px" class="button">Gunshot</button>
+        <button onclick="play_sound('moo')" style="width: 150px; height: 50px" class="button">Moo</button>
+        <button onclick="play_sound('quack')" style="width: 150px; height: 50px" class="button">Quack</button>
+        <button onclick="play_sound('explosion')" style="width: 150px; height: 50px" class="button">Explosion</button>
+        <button onclick="play_sound('android')" style="width: 150px; height: 50px" class="button">Loud Android Sound</button>
+        <button onclick="play_sound('jackenstein')" style="width: 150px; height: 50px" class="button">JACKENSTEIN</button>
+        <button onclick="play_sound('nukealarm')" style="width: 150px; height: 50px" class="button">NUKE ALARM</button>
+    </body>
+</html>
+<script>
+    async function play_sound(sound) {
+        new Audio("/static/sounds/" + sound + ".mp3").play()
+    }
+</script>
